@@ -1,0 +1,64 @@
+server:
+  port: 8085
+  
+spring:
+  application:
+    name: API-GATEWAY
+  
+    
+  cloud: 
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders:
+              - "Origin"
+              - "Content-Type"
+              - "Accept"
+              - "Authorization"
+              - "Referer"
+            allowedMethods:
+              - POST
+              - GET
+              - PUT
+              - DELETE
+              - OPTIONS
+      routes:
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**,/passengers/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: TRAIN-DETAILS-SERVICE
+          uri: lb://TRAIN-DETAILS-SERVICE
+          predicates:
+            - Path=/trains/** 
+          filters:
+            - AuthenticationFilter
+        
+        - id: TICKET-BOOKING-SERVICE
+          uri: lb://TICKET-BOOKING-SERVICE
+          predicates:
+            - Path=/tickets/**
+          filters:
+            - AuthenticationFilter
+            
+            
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_FIRST
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+
+ 
+        
+        

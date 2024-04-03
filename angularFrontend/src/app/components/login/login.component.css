@@ -1,0 +1,13 @@
+.full-width{
+    width: 100%;
+    
+}
+.img{
+    display:flex;
+    flex-wrap: wrap;
+   align-content: space-evenly;
+   width:50%;
+    opacity: 80%;
+    height: 400px;
+}
+

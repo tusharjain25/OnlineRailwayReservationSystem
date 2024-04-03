@@ -1,0 +1,36 @@
+
+<div >
+    <h2><b>Search Result</b></h2>
+    <table class = "table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Fare</th>
+          <th>AvailableSeats</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Train of result">
+          <!-- <td>{{res| json}}</td> -->
+          <td>{{ Train.trainId }}</td>
+          <td>{{ Train.trainNumber }}</td>
+          <td>{{ Train.trainName }}</td>
+          <td>{{ Train.source }}</td>
+          <td>{{ Train.destination }}</td>
+          <td>{{Train.fare}}</td>
+          <td>{{Train.availableSeats}}</td>
+          <!-- <td>
+            <button *ngIf="loggedIn" (click) = "bookTicket(Train.id)" class = "btn btn-info" style="margin-left: 10px"> Book Ticket</button>
+
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+

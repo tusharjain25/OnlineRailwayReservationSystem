@@ -1,0 +1,108 @@
+
+<!-- <nav class="navbar navbar-expand-lg  navbar-dark">
+    <ul class = "navbar-nav">
+        <li class = "nav-item">
+            <a routerLink="home" style="color:aliceblue; font-weight: bold; font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;" routerLinkActive="active" class="nav-link" >RailwayReservationSystem</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="home" routerLinkActive="active" class="nav-link" >Home</a>
+        </li>
+        
+        <li class="nav-item">
+            <a *ngIf="isAdmin()"  class="nav-link active" aria-current="page" routerLink="admin-dashboard">
+            AdminDashboard</a>
+          </li>
+
+          <li class="nav-item">
+            <a *ngIf="isUser()" class="nav-link active" aria-current="page" routerLink="dashboard">
+            UserDashboard</a>
+          </li>
+
+          <li class = "nav-item">
+            <button *ngIf="(loggedIn && isUser())"  routerLink="my-bookings" routerLinkActive="active" class="btn btn-secondary" >Bookings</button>
+        </li>
+
+        <li class = "nav-item">
+            <button *ngIf="!loggedIn" routerLink="login" routerLinkActive="active" class="btn btn-success" >Login</button>
+        </li>
+        <li class = "nav-item">
+            <button *ngIf="!loggedIn" routerLink="signup" routerLinkActive="active" class="btn btn-success" >Signup</button>
+        </li>
+       
+    </ul>
+    <div class=" ms-auto " style="margin: 15px">
+    <button *ngIf="loggedIn" (click)="logoutUser()" routerLink="#" routerLinkActive="active" class="btn btn-danger" >Logout</button>
+    </div>
+</nav> -->
+
+<mat-toolbar class="navbar">
+
+    <span>RailwayReservationSystem</span>
+
+    <a routerLink="home"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon" >
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+    </a>
+
+    <a routerLink="about"
+    style="margin-right: 25px;"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon" >
+    About
+    </a>
+
+    <a *ngIf="isAdmin()"
+    routerLink="admin-dashboard"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon" >
+    AdminDashboard
+    </a>
+
+    <a *ngIf="isUser()"
+    routerLink="dashboard"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon" >
+    UserDashboard
+    </a>
+
+    <a *ngIf="(loggedIn && isUser())"  routerLink="my-bookings" 
+    style="margin-left: 135px;"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon" >
+    Bookings
+    </a>
+
+    
+
+
+    <span class="example-spacer"></span>
+
+    <a
+    *ngIf="!loggedIn" routerLink="login"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    >Login</a>
+
+    <a
+    *ngIf="!loggedIn" routerLink="signup"
+    mat-icon-button
+    style="margin-left: 30px; margin-right: 40px; "
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    >Signup</a>
+
+    <a
+    *ngIf="loggedIn" (click)="logoutUser()" routerLink="#"
+    mat-icon-button
+    style=" margin-right: 50px;"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    >Logout</a>
+</mat-toolbar>

@@ -1,0 +1,51 @@
+<div>
+<div class="card container " style="width: 400px;">
+    
+  <h1 style="text-align: center; margin-top: 17px;"><b>Find Trains</b></h1>
+  
+<div class="col-md-6 offset-md-3">
+
+<form (ngSubmit)="searchTrains()">
+  <div class="form-group">
+    <label for="source"> Source:</label>
+    <input class ="form-control" type="text" id="source"  [(ngModel)]="source" name="source" required>
+  </div >
+    <br><br>
+    <div class="form-group" >
+      <label for="destination">Destination:</label>
+      <input class ="form-control" type="text" id="destination"  [(ngModel)]="destination" name="destination" required>
+    </div>
+    <br><br>
+    <div >
+      <label for="date">Date:</label>
+      <input type="date" [min]="today | date:'yyyy-MM-dd'" id="date"   name="date" required>
+    </div>
+  <br><br>
+  <div class="col-md-12 text-center mb-3">
+    <button type="submit" class="btn" style="background-color:darkkhaki ">Search Trains</button>
+  </div>
+    
+  </form>
+</div>
+</div>
+<div class="card container" style="width: 400px; margin-top: 50px;">
+  <h1 style="text-align: center; margin-top: 17px;"><b>Find Train By Train Number</b></h1>
+  <div class="col-md-6 offset-md-3 ">
+
+    <form (ngSubmit)="fetchTrain()">
+      <div class="form-group">
+        <!-- <label for="trainNumber"> Train Number:</label> -->
+        <input class ="form-control" type="text" id="trainNumber"  [(ngModel)]="trainNumber" name="trainNumber" required placeholder="Enter trainNumber">
+      </div >
+      <br><br>
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn" style="background-color:darkkhaki ;margin-bottom: 20px;">Search Train</button>
+      </div>
+      </form>
+      </div>
+      
+  <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quisquam blanditiis quidem, architecto ipsa molestiae error aut a mollitia, reiciendis porro? Illo excepturi beatae harum inventore rerum esse ab hic cumque, autem perspiciatis possimus corrupti aliquam aperiam! Enim ipsa tempore nobis amet exercitationem assumenda magni dignissimos neque accusantium odio, pariatur asperiores, quaerat voluptatum nisi? Exercitationem magnam quos nobis natus libero aliquam dolor veniam, illum animi non velit quibusdam omnis illo amet veritatis minima optio officia, quis assumenda tempore sit est maxime eveniet! Tempore et dignissimos placeat. Suscipit deleniti, iste nesciunt fugit officia labore veniam quaerat illum nihil aspernatur expedita illo?</p> -->
+</div>
+<br><br>
+<br><br>
+</div>

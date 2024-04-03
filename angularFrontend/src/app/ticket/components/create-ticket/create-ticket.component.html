@@ -1,0 +1,56 @@
+
+<div class="container">
+    <h2>Create Ticket For Any Passenger</h2>
+    <form #ticketForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id">Passenger ID:</label>
+            <input type="number" class="form-control" id="id" name="id" [(ngModel)]="id" required>
+          </div>
+          <!-- <div class="form-group">
+            <label for="ticketId">Ticket ID:</label>
+            <input type="number" class="form-control" id="ticketId" name="ticketId" [(ngModel)]="ticket.ticketId" required>
+          </div> -->
+          <div class="form-group">
+            <label for="trainId">Train ID:</label>
+            <input type="number" class="form-control" id="trainId" name="trainId" [(ngModel)]="trainId" required>
+          </div>
+      <div class="form-group">
+        <label for="passengerName">Passenger Name:</label>
+        <input type="text" class="form-control" id="passengerName" name="passengerName" [(ngModel)]="ticket.passengerName" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select class="form-control" id="gender" name="gender" [(ngModel)]="ticket.gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="ticket.email" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNo">Phone Number:</label>
+        <input type="tel" class="form-control" id="phoneNo" name="phoneNo" [(ngModel)]="ticket.phoneNo" required>
+      </div>
+      <div class="form-group">
+        <label for="requiredSeats">Required Seats:</label>
+        <input type="number" class="form-control" id="requiredSeats" name="requiredSeats" [(ngModel)]="ticket.requiredSeats" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" name="age" [(ngModel)]="ticket.age" required>
+      </div>
+      <div class="form-group">
+        <label for="bookedOn">Booked On:</label>
+        <input type="date" class="form-control" id="bookedOn" name="bookedOn" [(ngModel)]="ticket.bookedOn" required>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Create Ticket</button>
+      <br><br>
+      <br><br>
+      <br><br>
+    </form>
+  </div>
+  

@@ -1,0 +1,45 @@
+<div  >
+<h2> Train List</h2>
+
+<button (click)="createTrain()" class = "btn btn-info">
+   Add Train
+</button>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Train Id</th>
+            <th> Train number </th>
+            <th> Train Name</th>
+            <th> Source </th>
+            <th> Destination </th>
+            <th> Fare </th>
+            <th> Arrival Time </th>
+            <th> Departure Time </th>
+            <th> Available Seats </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let train of trains" >
+            <td> {{ train.trainId }} </td>
+            <td> {{ train.trainNumber }} </td>
+            <td> {{ train.trainName}} </td>
+            <td> {{ train.source}} </td>
+            <td> {{ train.destination}} </td>
+            <td> {{ train.fare }} </td>
+            <td> {{ train.arrivalTime }} </td>
+            <td> {{ train.departureTime }} </td>
+            <td> {{ train.availableSeats }} </td>
+            <td>
+                <button (click) = "updateTrain(train.trainId)" class = "btn btn-info"> Update</button>
+           
+                <button (click) = "deleteTrain(train.trainId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+           
+                <button (click) = "TrainDetails(train.trainId)" class = "btn btn-info" style="margin-left: 10px; margin-top: 3px;"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+</div>

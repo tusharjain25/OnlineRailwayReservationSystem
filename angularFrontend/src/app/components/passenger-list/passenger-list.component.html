@@ -1,0 +1,30 @@
+
+
+<h2> Passenger List</h2>
+
+<button (click)="createPassenger()" class = "btn btn-info">
+   Add Passenger
+</button>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Passenger id</th>
+            <th> Passenger Name </th>
+            <th> Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let passenger of passengers" >
+            <td> {{ passenger.id }} </td>
+            <td> {{ passenger.username }} </td>
+            <td> {{ passenger.email}} </td>
+            <td>
+                <button (click) = "updatePassenger(passenger.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deletePassenger(passenger.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "passengerDetails(passenger.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

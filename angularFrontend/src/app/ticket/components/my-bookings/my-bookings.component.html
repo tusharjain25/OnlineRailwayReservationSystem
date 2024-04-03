@@ -1,0 +1,85 @@
+
+  <h2 style="color: aliceblue;">View Ticket Details</h2>
+  <table class="table">
+    <thead>
+        <tr>
+            <th> TicketId</th>
+            <th> TrainId</th>
+            <th> PassengerId</th>
+            <th> PassengerName</th>
+            <th> Email </th>
+            <th> Age </th>
+            <th> Gender </th>
+            <th> PhoneNo</th>
+            <th> RequiredSeats </th>
+            <th> BookedOn</th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of searchticketResults">
+                <td> {{ ticket.ticketId }} </td>
+                <td> {{ ticket.trainId }} </td>
+                <td> {{ ticket.id}} </td>
+                <td> {{ ticket.passengerName}} </td>
+                <td> {{ ticket.email}} </td>
+                <td> {{ ticket.age }} </td>
+                <td> {{ ticket.gender }} </td>
+                <td> {{ ticket.phoneNo }} </td>
+                <td> {{ ticket.requiredSeats }} </td>
+                <td> {{ ticket.bookedOn }} </td>
+                <td>  <button (click) = "deleteTicket(ticket.ticketId)" class = "btn btn-danger" style="margin-left: 5px"> Cancel </button> </td>
+        </tr>
+    </tbody>
+  </table>
+  
+
+<h2 style="color: aliceblue;"> View Passenger Details</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Passenger id</th>
+            <th> Passenger Name </th>
+            <th> Email Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{ passenger.id }} </td>
+            <td> {{ passenger.username }} </td>
+            <td> {{ passenger.email}} </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2 style="color: aliceblue;"> View Train Details</h2>
+<table class="table">
+    <thead>
+      <tr >
+            <th> Train Id</th>
+            <th> Train number </th>
+            <th> Train Name</th>
+            <th> Source </th>
+            <th> Destination </th>
+            <th> Fare </th>
+            <th> Arrival Time </th>
+            <th> Departure Time </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let train of searchtrainResults ">
+          
+            <td> {{ train.trainId }} </td>
+            <td> {{ train.trainNumber }} </td>
+            <td> {{ train.trainName}} </td>
+            <td> {{ train.source}} </td>
+            <td> {{ train.destination}} </td>
+            <td> {{ train.fare }} </td>
+            <td> {{ train.arrivalTime }} </td>
+            <td> {{ train.departureTime }} </td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<br><br>

@@ -1,0 +1,49 @@
+
+<div>
+    <h2> Ticket List</h2>
+    
+    <!-- <button (click)="createTicket()" class = "btn btn-info">
+       Add Ticket
+    </button> -->
+    
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th> TicketId</th>
+                <th> TrainId</th>
+                <th> PassengerId</th>
+                <th> PassengerName</th>
+                <th> Email </th>
+                <th> Age </th>
+                <th> Gender </th>
+                <th> PhoneNo</th>
+                <th> RequiredSeats </th>
+                <th> BookedOn</th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let ticket of tickets" >
+                <td> {{ ticket.ticketId }} </td>
+                <td> {{ ticket.trainId }} </td>
+                <td> {{ ticket.id}} </td>
+                <td> {{ ticket.passengerName}} </td>
+                <td> {{ ticket.email}} </td>
+                <td> {{ ticket.age }} </td>
+                <td> {{ ticket.gender }} </td>
+                <td> {{ ticket.phoneNo }} </td>
+                <td> {{ ticket.requiredSeats }} </td>
+                <td> {{ ticket.bookedOn }} </td>
+    
+                <td>
+                    <!-- <button (click) = "updateTicket(ticket.ticketId)" class = "btn btn-info"> Update</button> -->
+                
+                    <button (click) = "deleteTicket(ticket.ticketId)" class = "btn btn-danger" style="margin-left: 5px"> Delete</button>
+                
+                    <button (click) = "TicketDetails(ticket.ticketId)" class = "btn btn-info" style="margin-left: 5px"> View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    </div>

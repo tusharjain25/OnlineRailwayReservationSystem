@@ -1,0 +1,39 @@
+<div class="card container">
+    <h2>Create Train</h2>
+    <form #trainForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="trainNumber">Train Number:</label>
+        <input type="number" class="form-control" id="trainNumber" name="trainNumber" [(ngModel)]="train.trainNumber" required>
+      </div>
+      <div class="form-group">
+        <label for="trainName">Train Name:</label>
+        <input type="text" class="form-control" id="trainName" name="trainName" [(ngModel)]="train.trainName" required>
+      </div>
+      <div class="form-group">
+        <label for="source">Source:</label>
+        <input type="text" class="form-control" id="source" name="source" [(ngModel)]="train.source" required>
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination:</label>
+        <input type="text" class="form-control" id="destination" name="destination" [(ngModel)]="train.destination" required>
+      </div>
+      <div class="form-group">
+        <label for="fare">Fare:</label>
+        <input type="number" class="form-control" id="fare" name="fare" [(ngModel)]="train.fare" required>
+      </div>
+      <div class="form-group">
+        <label for="availableSeats">AvailableSeats:</label>
+        <input type="number" class="form-control" id="availableSeats" name="availableSeats" [(ngModel)]="train.availableSeats" required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="departureTime">Departure Time:</label>
+        <input type="time" class="form-control" id="departureTime" name="departureTime" [(ngModel)]="train.departureTime" required>
+      </div>
+      <div class="form-group">
+        <label for="arrivalTime">Arrival Time:</label>
+        <input type="time" class="form-control" id="arrivalTime" name="arrivalTime" [(ngModel)]="train.arrivalTime" required>
+      </div> -->
+      <button type="submit" class="btn btn-primary mt-2 mb-4">Create Train</button>
+    </form>
+  </div>
+  
